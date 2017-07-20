@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table , th, td {
+    border: 2px solid lightblue;
+}
+
+table tr:first-child {
+    counter-reset: rowNumber;
+}
+
+table tr {
+    counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+td, th {
+    padding: 5px;
+    width: 120px;
+}
